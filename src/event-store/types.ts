@@ -4,20 +4,20 @@ interface Payload {
 }
 
 export interface EventEnvelope {
-  streamId: string
-  version: number
-  eventType: Payload['eventType']
   payload: Payload
 }
 
 export interface DurableEventEnvelope extends EventEnvelope {
   position: number
+  streamId: string
+  version: number
+  eventType: Payload['eventType']
 }
 
 export interface Stream {
   streamId: string
   expectedVersion: number
-  events: DurableEventEnvelope[]
+  events: EventEnvelope[]
 }
 
 export interface EventStore {
