@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2021",
+    "moduleResolution": "Node",
+    "lib": ["es2021", "DOM"],
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "types": ["node", "jest"]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+}
