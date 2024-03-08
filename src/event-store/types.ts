@@ -21,6 +21,6 @@ export interface Stream {
 }
 
 export interface EventStore {
-  read: (streamId: string) => Promise<void>
+  read: (streamId: string) => Promise<DurableEventEnvelope[]>
   append: (stream: Stream) => Promise<void>
 }
