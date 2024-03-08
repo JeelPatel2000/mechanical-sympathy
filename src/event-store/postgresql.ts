@@ -58,7 +58,7 @@ export function buildAppendQueryWihtValues(stream: Stream): { sql: string, value
     valueRows.push(
       `($${++valueCount}, $${++valueCount}, $${++valueCount}, $${++valueCount}::jsonb)`,
     );
-    values.push(streamId, currentVersion++, event.eventType, event.payload);
+    values.push(streamId, currentVersion++, event.payload.eventType, event.payload);
   }
 
   const sql = `INSERT INTO store (stream_id, version, event_type, payload) values ${valueRows.join(`, `)}`;
