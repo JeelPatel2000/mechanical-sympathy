@@ -38,5 +38,21 @@
     "jest": "^29.7.0",
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2"
+  },
+  "jest": {
+    "rootDir": "./",
+    "globalSetup": "<rootDir>/src/utils/jest-setup.ts",
+    "globalTeardown": "<rootDir>/src/utils/jest-teardown.ts",
+    "testMatch": [
+      "<rootDir>/src/**/*.spec.ts"
+    ],
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "testEnvironment": "node"
   }
 }
